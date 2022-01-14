@@ -1,0 +1,144 @@
+/* ----------- RESET -------- */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* ----------- VARIABLES -------- */
+:root {
+  --white: 
+    rgba(255, 255, 255, 1);
+}
+
+/* ----------- MIXINS -------- */
+/* ----------- GENERAL STYLES -------- */
+main {
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  color: var(--white);
+}
+
+h1 {
+  font-family: 'Anton', sans-serif;
+  font-size: 13rem;
+  text-transform: uppercase;
+  color: white;
+  text-align: center;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+/* ----------- CONTENT -------- */
+.background {
+  width: 100vw;
+  height: 112vh;
+  background: radial-gradient(ellipse at bottom, #fffcd3 0%, #8ee9d2 35%, #186266 100%);
+  overflow: hidden;
+}
+
+/* ----------- SIGN -------- */
+.sign {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 3rem 7rem;
+  border: 0.5rem solid white;
+}
+
+.sign__subtitle {
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+  letter-spacing: 1.7px;
+  color: white;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: lighter;
+}
+
+/* ----------- CLOUDS -------- */
+.cloud-01 {
+  opacity: 0.3;
+  position: absolute;
+  fill: white;
+  width: 27rem;
+  top: 5rem;
+  left: 30vw;
+}
+
+.cloud-02 {
+  opacity: 0.3;
+  position: absolute;
+  fill: white;
+  width: 40rem;
+  top: -2rem;
+  left: 20vw;
+}
+
+.cloud-03 {
+  opacity: 0.3;
+  position: absolute;
+  fill: white;
+  width: 40rem;
+  top: -10em;
+  left: 50vw;
+}
+
+.cloud-04 {
+  opacity: 0.3;
+  position: absolute;
+  fill: white;
+  width: 50rem;
+  top: -6rem;
+  left: 50vw;
+}
+
+.cloud-05 {
+  opacity: 0.3;
+  position: absolute;
+  fill: white;
+  width: 70rem;
+  top: -10rem;
+  left: -20vw;
+}
+
+.cloud-06 {
+  opacity: 0.3;
+  position: absolute;
+  fill: white;
+  width: rem;
+  top: 5rem;
+  left: 30vw;
+}
+
+.waves {
+  position: absolute;
+  bottom: -8rem;
+  left: 0;
+}
+
+/* ----------- ONCE UPON TIME SECTION -------- */
+.background-ocean {
+  background-color: #205160;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.onceupontime__text {
+  position: absolute;
+  top: 20rem;
+  right: 15rem;
+  max-width: 35rem;
+}
+/*# sourceMappingURL=style.css.map */

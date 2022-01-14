@@ -1,0 +1,154 @@
+/* ----------- RESET -------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----------- VARIABLES -------- */
+:root {
+       --white: 
+    rgba(255, 255, 255, 1);
+
+}
+
+/* ----------- MIXINS -------- */
+@mixin cloud {
+    opacity: 0.3;
+    position: absolute;
+    fill: white;
+
+}
+
+
+/* ----------- GENERAL STYLES -------- */
+
+main {
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    color: var(--white);
+}
+
+h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 13rem;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    line-height: 1.2;
+    
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+
+
+
+/* ----------- CONTENT -------- */
+.background {
+    width: 100vw;
+    height: 112vh; 
+    background:radial-gradient(ellipse at bottom, rgb(255, 252, 211) 0%, rgb(142, 233, 210) 35%, #186266 100%);
+    overflow: hidden;
+}
+
+/* ----------- SIGN -------- */
+
+.sign {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 3rem 7rem;
+
+    border: 0.5rem solid white;
+
+
+    &__subtitle {
+        font-family: sans-serif ;
+        font-weight: lighter;
+        text-transform: uppercase;
+        letter-spacing: 1.7px;
+        color: white;
+        text-align: center;
+        font-size: 0.75rem;
+        font-weight: lighter;
+    }
+}
+/* ----------- CLOUDS -------- */
+.cloud {
+    &-01 {
+    @include cloud;
+    width: 27rem;
+    top: 5rem;
+    left: 30vw;
+    }
+
+    &-02{
+    @include cloud;
+    width: 40rem;
+    top: -2rem;
+    left: 20vw;
+
+    }
+
+    &-03{
+    @include cloud;
+    width: 40rem;
+    top: -10em;
+    left: 50vw;
+    }
+
+    &-04{
+    @include cloud;
+    width: 50rem;
+    top: -6rem;
+    left: 50vw;
+    }
+    
+    &-05{
+    @include cloud;
+    width: 70rem;
+    top: -10rem;
+    left: -20vw;
+    }
+
+    &-06 {
+        @include cloud;
+        width: rem;
+        top: 5rem;
+        left: 30vw;
+        }
+
+}
+
+.waves {
+    position: absolute;
+    bottom: -8rem;
+    left: 0;
+}
+
+/* ----------- ONCE UPON TIME SECTION -------- */
+
+.background-ocean {
+    background-color: rgb(32, 81, 96);
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+
+.onceupontime {
+    &__text {
+        position: absolute;
+        top: 20rem;
+        right: 15rem;
+        max-width: 35rem;
+
+    }
+  }
