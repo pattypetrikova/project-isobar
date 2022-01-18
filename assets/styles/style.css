@@ -1,4 +1,4 @@
-/* ----------- RESET -------- */
+/* ----------------------- RESET --------------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -6,28 +6,22 @@
           box-sizing: border-box;
 }
 
-/* ----------- VARIABLES -------- */
-:root {
-  --white: 
-    rgba(255, 255, 255, 1);
-}
-
-/* ----------- MIXINS -------- */
-/* ----------- GENERAL STYLES -------- */
+/* ----------------------- VARIABLES ----------------------- */
+/* ----------------------- MIXINS ----------------------- */
+/* ------------------ GENERAL STYLES -------------------- */
 main {
   overflow: hidden;
 }
 
 body {
-  font-family: 'Manrope', sans-serif;
-  color: var(--white);
+  font-family: "Manrope", sans-serif;
+  color: white;
 }
 
 h1 {
-  font-family: 'Anton', sans-serif;
+  font-family: "Anton", sans-serif;
   font-size: 13rem;
   text-transform: uppercase;
-  color: white;
   text-align: center;
   line-height: 1.2;
 }
@@ -36,15 +30,45 @@ h2 {
   font-size: 3.5rem;
 }
 
-/* ----------- CONTENT -------- */
+.container {
+  position: relative;
+}
+
+.text {
+  max-width: 50%;
+  z-index: 1;
+}
+
+.title {
+  max-width: 40rem;
+  margin: auto;
+}
+
 .background {
+  background-color: #205160;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* ------------------------ CONTENT ---------------------- */
+/* ------------------------ INTRO SECTION ---------------------- */
+.introbackround {
   width: 100vw;
   height: 112vh;
   background: radial-gradient(ellipse at bottom, #fffcd3 0%, #8ee9d2 35%, #186266 100%);
   overflow: hidden;
 }
 
-/* ----------- SIGN -------- */
+/* ------------------------- SIGN ------------------------- */
 .sign {
   position: absolute;
   top: 50%;
@@ -66,7 +90,7 @@ h2 {
   font-weight: lighter;
 }
 
-/* ----------- CLOUDS -------- */
+/* --------------------------- CLOUDS --------------------- */
 .cloud-01 {
   opacity: 0.3;
   position: absolute;
@@ -127,18 +151,336 @@ h2 {
   left: 0;
 }
 
-/* ----------- ONCE UPON TIME SECTION -------- */
+/* ---------------------- ONCE UPON TIME SECTION -------------------- */
 .background-ocean {
   background-color: #205160;
   height: 100vh;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
-.onceupontime__text {
+.fish-sc1 {
+  height: 12rem;
+  z-index: 100;
+  position: relative;
+}
+
+.seaweed-sc1 {
   position: absolute;
-  top: 20rem;
-  right: 15rem;
-  max-width: 35rem;
+  max-height: 25rem;
+  bottom: 20rem;
+}
+
+.bubble-wrapper {
+  width: 20rem;
+  height: 20rem;
+  position: absolute;
+  bottom: 17rem;
+  left: 10rem;
+}
+
+.bubble-wrapper > div {
+  background-color: white;
+  position: absolute;
+  border-radius: 50px;
+}
+
+.bubble-1 {
+  width: 1.5rem;
+  height: 1.5rem;
+  bottom: 0;
+  left: 15px;
+  -webkit-animation: bubbleOne 4s linear infinite;
+          animation: bubbleOne 4s linear infinite;
+}
+
+@-webkit-keyframes bubbleOne {
+  0% {
+    bottom: 0;
+    left: 15px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 50%;
+    left: 30%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    left: 80%;
+    opacity: 0;
+  }
+}
+
+@keyframes bubbleOne {
+  0% {
+    bottom: 0;
+    left: 15px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 50%;
+    left: 30%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 100%;
+    left: 80%;
+    opacity: 0;
+  }
+}
+
+.bubble-2 {
+  width: 1.5rem;
+  height: 1.5rem;
+  bottom: 1rem;
+  left: 1.5rem;
+  -webkit-animation: bubbleTwo 7s linear infinite;
+          animation: bubbleTwo 7s linear infinite;
+}
+
+@-webkit-keyframes bubbleTwo {
+  0% {
+    bottom: 10px;
+    left: 25px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 40%;
+    left: 60%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 90%;
+    left: 90%;
+    opacity: 0;
+  }
+}
+
+@keyframes bubbleTwo {
+  0% {
+    bottom: 10px;
+    left: 25px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 40%;
+    left: 60%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 90%;
+    left: 90%;
+    opacity: 0;
+  }
+}
+
+.mountain {
+  position: absolute;
+  bottom: -30rem;
+  right: -15rem;
+  opacity: 0.5;
+}
+
+.mountain-bg {
+  position: absolute;
+  bottom: -63rem;
+  right: 0;
+  width: 100vw;
+}
+
+/* ---------------------- DREAMING SECTION-------------------- */
+.night {
+  background-color: #1c1158;
+}
+
+.bed {
+  max-height: 25rem;
+}
+
+.dream {
+  position: absolute;
+  max-width: 11rem;
+  right: 40rem;
+  top: 10rem;
+}
+
+.dream02 {
+  position: absolute;
+  max-width: 3rem;
+  right: 43rem;
+  top: 22rem;
+}
+
+.dream03 {
+  position: absolute;
+  max-width: 1rem;
+  right: 41rem;
+  top: 26rem;
+}
+
+/* ---------------------- FISHGROUP SECTION-------------------- */
+.fishgroup {
+  background: -webkit-gradient(linear, left bottom, left top, from(#205160), to(#1c1158));
+  background: linear-gradient(0deg, #205160 0%, #1c1158 100%);
+}
+
+.wrapper {
+  position: relative;
+}
+
+.fish-sc3 {
+  max-height: 10rem;
+  padding: 0 7rem;
+}
+
+.coral {
+  position: absolute;
+  bottom: -10rem;
+  max-height: 17rem;
+  left: -7rem;
+}
+
+.coral02 {
+  position: absolute;
+  bottom: -11rem;
+  max-height: 25rem;
+  left: 15rem;
+}
+
+.crab {
+  position: absolute;
+  max-height: 7rem;
+  bottom: -9rem;
+  left: 10rem;
+}
+
+.fugu {
+  position: absolute;
+  max-height: 6rem;
+  top: -5rem;
+  left: 0rem;
+}
+
+.dori {
+  position: absolute;
+  max-height: 10rem;
+  top: -10rem;
+  left: 20rem;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+/* ---------------------- DONT GIVE UP SECTION -------------------- */
+.fish-sc4 {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  padding: 0 5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.spanner {
+  position: absolute;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  -webkit-transform: rotate(200deg);
+          transform: rotate(200deg);
+  top: 10rem;
+  left: 8rem;
+  max-width: 5rem;
+  z-index: 3;
+}
+
+.desk {
+  position: absolute;
+  top: 5rem;
+  left: -14rem;
+  max-width: 20rem;
+  z-index: 1;
+}
+
+.bolts {
+  position: absolute;
+  top: 4rem;
+  left: -6rem;
+  max-width: 5rem;
+  z-index: 1;
+}
+
+.feathers {
+  position: absolute;
+  top: 4rem;
+  left: 1rem;
+  max-width: 5rem;
+  z-index: 1;
+}
+
+.books {
+  position: absolute;
+  top: 4.2rem;
+  left: -13rem;
+  max-width: 5rem;
+  z-index: 1;
+}
+
+.window {
+  position: absolute;
+  top: -8rem;
+  left: 10rem;
+  max-width: 15rem;
+}
+
+.coral-bg {
+  position: absolute;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  right: -10rem;
+  top: -27rem;
+  max-width: 70vh;
+  opacity: 0.3;
+}
+
+.coral-bg02 {
+  position: absolute;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  right: -15rem;
+  top: -35rem;
+  max-width: 60vh;
+  opacity: 0.9;
+}
+
+/* ---------------------- READY SECTION -------------------- */
+.ready {
+  background: -webkit-gradient(linear, left bottom, left top, from(#4f8899), to(#205160));
+  background: linear-gradient(0deg, #4f8899 0%, #205160 100%);
+}
+
+/* ---------------------- SKY SECTION -------------------- */
+.sky {
+  background: -webkit-gradient(linear, left bottom, left top, from(#8bbac9), to(#4f8899));
+  background: linear-gradient(0deg, #8bbac9 0%, #4f8899 100%);
+}
+
+.waves02 {
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  position: absolute;
+  top: 0;
+}
+
+.universe {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(30%, #3e5b99), color-stop(70%, #8bbac9));
+  background: linear-gradient(0deg, #3e5b99 30%, #8bbac9 70%);
 }
 /*# sourceMappingURL=style.css.map */

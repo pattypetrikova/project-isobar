@@ -1,18 +1,20 @@
-/* ----------- RESET -------- */
+/* ----------------------- RESET --------------------------- */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ----------- VARIABLES -------- */
-:root {
-       --white: 
-    rgba(255, 255, 255, 1);
+/* ----------------------- VARIABLES ----------------------- */
 
-}
+// colors //
+$text-color: white;
 
-/* ----------- MIXINS -------- */
+// fonts //
+$primary-font: 'Manrope', sans-serif;
+$headline-font: 'Anton', sans-serif;
+
+/* ----------------------- MIXINS ----------------------- */
 @mixin cloud {
     opacity: 0.3;
     position: absolute;
@@ -20,23 +22,21 @@
 
 }
 
-
-/* ----------- GENERAL STYLES -------- */
+/* ------------------ GENERAL STYLES -------------------- */
 
 main {
     overflow: hidden;
 }
 
 body {
-    font-family: 'Manrope', sans-serif;
-    color: var(--white);
+    font-family: $primary-font;
+    color: $text-color;
 }
 
 h1 {
-    font-family: 'Anton', sans-serif;
+    font-family: $headline-font;
     font-size: 13rem;
     text-transform: uppercase;
-    color: white;
     text-align: center;
     line-height: 1.2;
     
@@ -48,16 +48,41 @@ h2 {
 
 
 
+.container {
+    position: relative;
+}
 
-/* ----------- CONTENT -------- */
+.text {
+    max-width: 50%;
+    z-index: 1;
+
+    }
+
+.title {
+        max-width: 40rem;
+        margin: auto;
+    }
+  
 .background {
+    background-color: rgb(32, 81, 96);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* ------------------------ CONTENT ---------------------- */
+
+/* ------------------------ INTRO SECTION ---------------------- */
+.introbackround {
     width: 100vw;
     height: 112vh; 
     background:radial-gradient(ellipse at bottom, rgb(255, 252, 211) 0%, rgb(142, 233, 210) 35%, #186266 100%);
     overflow: hidden;
 }
 
-/* ----------- SIGN -------- */
+/* ------------------------- SIGN ------------------------- */
 
 .sign {
     position: absolute;
@@ -66,7 +91,7 @@ h2 {
     transform: translate(-50%,-50%);
     padding: 3rem 7rem;
 
-    border: 0.5rem solid white;
+    border: 0.5rem solid $text-color;
 
 
     &__subtitle {
@@ -74,13 +99,13 @@ h2 {
         font-weight: lighter;
         text-transform: uppercase;
         letter-spacing: 1.7px;
-        color: white;
+        color: $text-color;
         text-align: center;
         font-size: 0.75rem;
         font-weight: lighter;
     }
 }
-/* ----------- CLOUDS -------- */
+/* --------------------------- CLOUDS --------------------- */
 .cloud {
     &-01 {
     @include cloud;
@@ -133,22 +158,263 @@ h2 {
     left: 0;
 }
 
-/* ----------- ONCE UPON TIME SECTION -------- */
+/* ---------------------- ONCE UPON TIME SECTION -------------------- */
 
 .background-ocean {
     background-color: rgb(32, 81, 96);
     height: 100vh;
     width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     position: relative;
+    
 }
 
 
-.onceupontime {
-    &__text {
-        position: absolute;
-        top: 20rem;
-        right: 15rem;
-        max-width: 35rem;
+.fish-sc1 {
+    height: 12rem;
+    z-index: 100;
+    position: relative;
 
+}
+
+.seaweed-sc1 {
+    position: absolute;
+    max-height: 25rem;
+    bottom: 20rem;
+}
+//   BUBBLES
+
+.bubble-wrapper {
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    bottom: 17rem;
+    left: 10rem;
+  
+    &> div {
+      background-color: $text-color;
+      position: absolute;
+      border-radius: 50px;
     }
+}
+.bubble-1 {
+    width: 1.5rem;
+    height: 1.5rem;
+    bottom: 0;
+    left: 15px;
+    animation: bubbleOne 4s linear infinite;
+
+    @keyframes bubbleOne {
+        0% { bottom: 0; left: 15px; opacity: 0 }
+        50% { bottom: 50%; left: 30%; opacity: 1 }
+        100% { bottom: 100%; left: 80%; opacity: 0 }
+      }
+    
   }
+
+  .bubble-2 {
+    width: 1.5rem;
+    height: 1.5rem;
+    bottom: 1rem;
+    left: 1.5rem;
+    animation: bubbleTwo 7s linear infinite;
+
+    @keyframes bubbleTwo {
+        0% { bottom: 10px; left: 25px; opacity: 0 }
+        50% { bottom: 40%; left: 60%; opacity: 1 }
+        100% { bottom: 90%; left: 90%; opacity: 0 }
+      }
+  }
+
+.mountain {
+    position: absolute;
+    bottom: -30rem;
+    right: -15rem; 
+    opacity: 0.5;
+}
+
+.mountain-bg {
+    position: absolute;
+    bottom: -63rem;
+    right: 0;
+    width: 100vw;
+   
+}
+
+
+
+/* ---------------------- DREAMING SECTION-------------------- */
+
+  .night {
+    background-color: rgb(28, 17, 88);
+  }
+
+  .bed {
+      max-height: 25rem;
+  }
+
+.dream{
+    position: absolute;
+    max-width: 11rem;
+    right: 40rem;
+    top: 10rem;
+}
+.dream02{
+    position: absolute;
+    max-width: 3rem;
+    right: 43rem;
+    top: 22rem;
+}
+.dream03{
+    position: absolute;
+    max-width: 1rem;
+    right: 41rem;
+    top: 26rem;
+}
+
+/* ---------------------- FISHGROUP SECTION-------------------- */
+
+.fishgroup {
+    background: linear-gradient(0deg, rgba(32,81,96,1) 0%, rgba(28,17,88,1) 100%);
+}
+
+.wrapper {
+    position: relative;
+}
+
+.fish-sc3 {
+    max-height: 10rem;
+    padding: 0 7rem;
+}
+.coral {
+    position: absolute;
+    bottom: -10rem;
+    max-height: 17rem;
+    left: -7rem;
+}
+.coral02 {
+    position: absolute;
+    bottom: -11rem;
+    max-height: 25rem;
+    left: 15rem;
+}
+
+.crab {
+    position: absolute;
+    max-height: 7rem;
+    bottom: -9rem;
+    left: 10rem;
+}
+.fugu {
+    position: absolute;
+    max-height: 6rem;
+    top: -5rem;
+    left: 0rem;
+}
+.dori {
+    position: absolute;
+    max-height: 10rem;
+    top:-10rem;
+    left: 20rem;
+    transform: scaleX(-1);
+}
+
+/* ---------------------- DONT GIVE UP SECTION -------------------- */
+
+.fish-sc4 {
+    transform: scaleX(-1);
+    padding: 0 5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.spanner {
+    position: absolute;
+    transform: scaleX(-1);
+    transform: rotate(200deg);
+    top: 10rem ;
+    left: 8rem;
+    max-width: 5rem;
+    z-index: 3;
+}
+
+.desk {
+    position: absolute;
+    top: 5rem;
+    left: -14rem;
+    max-width: 20rem;
+    z-index: 1;
+}
+
+.bolts {
+    position: absolute;
+    top: 4rem;
+    left: -6rem;
+    max-width: 5rem;
+    z-index: 1;
+}
+
+.feathers {
+    position: absolute;
+    top: 4rem;
+    left: 1rem;
+    max-width: 5rem;
+    z-index: 1;
+}
+
+.books {
+    position: absolute;
+    top: 4.2rem;
+    left: -13rem;
+    max-width: 5rem;
+    z-index: 1;
+}
+
+.window {
+    position: absolute;
+    top: -8rem;
+    left: 10rem;
+    max-width: 15rem;
+}
+
+.coral-bg {
+    position: absolute;
+    transform: rotate(270deg);
+    right: -10rem;
+    top: -27rem;
+    max-width: 70vh;
+    opacity: 0.3;
+}
+
+.coral-bg02{
+    position: absolute;
+    transform: rotate(270deg);
+    right: -15rem;
+    top: -35rem;
+    max-width: 60vh;
+    opacity: 0.9;
+}
+/* ---------------------- READY SECTION -------------------- */
+
+.ready {
+    background: linear-gradient(0deg, rgb(79, 136, 153) 0%, rgba(32,81,96,1) 100%);
+}
+
+
+/* ---------------------- SKY SECTION -------------------- */
+
+.sky {
+    background: linear-gradient(0deg, rgb(139, 186, 201) 0%, rgba(79, 136, 153,1) 100%);
+}
+.waves02{
+    transform: scaleY(-1);
+    position: absolute;
+    top: 0;
+}
+
+
+.universe {
+    background: linear-gradient(0deg, rgb(62, 91, 153) 30%, rgb(139, 186, 201) 70%);
+}
