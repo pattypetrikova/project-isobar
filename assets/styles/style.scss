@@ -149,7 +149,7 @@ h2 {
     &-06 {
     @include cloud;
     width: 40rem;
-    top: 10rem;
+    top: 3rem;
     right: -10rem;
      }
 
@@ -157,9 +157,18 @@ h2 {
 
 .waves {
     position: absolute;
-    bottom: -8rem;
+    bottom: -1rem;
+    left: -10rem;
+
+
+}
+
+.waves01{
+    position: absolute;
+    bottom: -1rem;
     left: 0;
 }
+
 
 /* ---------------------- ONCE UPON TIME SECTION -------------------- */
 

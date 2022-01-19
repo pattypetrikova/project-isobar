@@ -142,13 +142,19 @@ h2 {
   position: absolute;
   fill: white;
   width: 40rem;
-  top: 10rem;
+  top: 3rem;
   right: -10rem;
 }
 
 .waves {
   position: absolute;
-  bottom: -8rem;
+  bottom: -1rem;
+  left: -10rem;
+}
+
+.waves01 {
+  position: absolute;
+  bottom: -1rem;
   left: 0;
 }
 

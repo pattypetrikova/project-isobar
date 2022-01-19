@@ -59,12 +59,14 @@ var tl = gsap.timeline({
     x: -500,
   }, );
 
+//---------------------- waves -----------------------/ /
   gsap.to(".waves",{
     scrollTrigger: {
     trigger: ".waves",
-    start:"bottom bottom"
+    start:"bottom bottom",
+    scrub: 3,
       },
-      y: 200,
+      x: -800,
       duration: 3,
   });
 
