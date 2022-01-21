@@ -158,7 +158,8 @@ h2 {
 .waves {
     position: absolute;
     bottom: -1rem;
-    left: -10rem;
+    left: -10rem;    
+    transform: scaleX(-1);
 
 
 }
@@ -167,6 +168,7 @@ h2 {
     position: absolute;
     bottom: -1rem;
     left: 0;
+
 }
 
 
@@ -762,10 +764,10 @@ canvas {
     }
 
     .city-back {
-        bottom: -25rem;
+        bottom: -29rem;
     }
     .city-front {
-        bottom: -25rem;
+        bottom: -29rem;
     }
 }
 
