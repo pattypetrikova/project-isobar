@@ -19,7 +19,7 @@ $headline-font: 'Anton', sans-serif;
     opacity: 0.3;
     position: absolute;
     fill: white;
-
+    z-index: 101;
 }
 
 /* ------------------ GENERAL STYLES -------------------- */
@@ -77,7 +77,7 @@ h2 {
 /* ------------------------ INTRO SECTION ---------------------- */
 .introbackround {
     width: 100vw;
-    height: 112vh; 
+    height: 120vh; 
     background:radial-gradient(ellipse at bottom, rgb(255, 252, 211) 0%, rgb(142, 233, 210) 35%, #186266 100%);
     overflow-x: hidden;
     position: relative;
@@ -112,7 +112,7 @@ h2 {
 .cloud {
     &-01 {
     @include cloud;
-    width: 27rem;
+    width: 25rem;
     top: 5rem;
     left: 30rem;
     }
@@ -141,14 +141,14 @@ h2 {
     
     &-05{
     @include cloud;
-    width: 70rem;
+    width: 60rem;
     top: 0rem;
     left: -20vw;
     }
 
     &-06 {
     @include cloud;
-    width: 40rem;
+    width: 35rem;
     top: 3rem;
     right: -10rem;
      }
@@ -179,10 +179,7 @@ h2 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-  
-    
 }
-
 
 
 .fish-sc1 {
@@ -272,14 +269,14 @@ h2 {
 }
 .mountain {
     position: absolute;
-    bottom: -30rem;
+    bottom: -55rem;
     left: 15rem; 
     opacity: 0.5;
 }
 
 .mountain-bg {
     position: absolute;
-    bottom: -10rem;
+    bottom: -35rem;
     right: 0;
     width: 120rem;
    
@@ -297,23 +294,26 @@ h2 {
       max-height: 25rem;
   }
 
+.scene-dreaming {
+   position: relative;
+  }
 .dream{
     position: absolute;
     max-width: 11rem;
-    right: 40rem;
-    top: 10rem;
+    left: -10rem;
+    top: -10rem;
 }
 .dream02{
     position: absolute;
     max-width: 3rem;
-    right: 43rem;
-    top: 22rem;
+    left: -5rem;
+    top: 2rem;
 }
 .dream03{
     position: absolute;
     max-width: 1rem;
-    right: 41rem;
-    top: 26rem;
+    left: -1rem;
+    top: 7rem;
 }
 
 /* ---------------------- FISHGROUP SECTION-------------------- */
@@ -385,31 +385,24 @@ h2 {
 .desk {
     position: absolute;
     top: 5rem;
-    left: -14rem;
+    left: -5rem;
     max-width: 20rem;
+    z-index: 1;
+}
+
+
+.feathers {
+    position: absolute;
+    top: 4rem;
+    left: 0rem;
+    max-width: 5rem;
     z-index: 1;
 }
 
 .bolts {
     position: absolute;
-    top: 4rem;
-    left: -6rem;
-    max-width: 5rem;
-    z-index: 1;
-}
-
-.feathers {
-    position: absolute;
-    top: 4rem;
-    left: 1rem;
-    max-width: 5rem;
-    z-index: 1;
-}
-
-.books {
-    position: absolute;
     top: 4.2rem;
-    left: -13rem;
+    left: -5rem;
     max-width: 5rem;
     z-index: 1;
 }
@@ -452,13 +445,14 @@ h2 {
 
 .scene-ready {
       position: relative;
+      z-index: 100;
 }
 
 
 .fish-sc5 {
     transform: rotate(60deg);
   
-    z-index: 1;
+    z-index: 20;
 }
 
 .wing{
@@ -495,6 +489,22 @@ h2 {
     z-index: 1;
 }
 
+.city-back {
+    position: absolute;
+    opacity: 0.3;
+    width: 100vw;
+    bottom: -25rem;
+    z-index: 1;
+}
+
+.city-front {
+    position: absolute;
+    bottom: -30rem;
+    width: 100vw;
+    z-index: 1;
+
+}
+
 
 .sun {
 	width: 200px;
@@ -525,7 +535,337 @@ h2 {
     background: linear-gradient(0deg, rgb(62, 91, 153) 0%, rgb(139, 186, 201) 70%);
 }
 
+.text {
+    position: relative;
+    z-index: 3;
+}
+
 canvas {
     position: absolute;
     bottom: 0;
+    background-color: rgb(44,60,68);
+      background: linear-gradient(0deg, rgb(62, 91, 153) 0%, rgb(44,60,68) 70%);
+    z-index: 2;
+}
+
+/* ---------------------- RESPONZIVITY -------------------- */
+
+@media (max-width: 1500px) {
+
+    .title {
+        max-width: 34rem;
+    }
+
+    .background {
+        justify-content: space-around;
+    }
+    h2 {
+        font-size: 3.0rem;
+    }
+
+}
+
+@media (max-width: 1350px) {
+    .title {
+        max-width: 31rem;
+    }
+
+    h2 {
+        font-size: 2.7rem;
+    }
+
+    .cloud {
+        &-01 {
+        width: 19rem;
+        }
+        &-02 {
+        width: 25rem;
+        }
+        &-03 {
+        width: 20rem;
+        }
+        &-04 {
+        width: 45rem;
+        }
+
+        &-05 {
+        width: 45rem;
+        }
+
+    }
+
+
+
+}
+
+@media (max-width: 1250px) {
+    .title {
+        max-width: 29rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .title {
+        max-width: 22rem;
+    }
+
+    h2 {
+        font-size: 2.3rem;
+    }
+
+    .cloud {
+        &-01 {
+        width: 15rem;
+        }
+        &-02 {
+        width: 20rem;
+        }
+        &-03 {
+        width: 15rem;
+        }
+        &-04 {
+        width: 40rem;
+        }
+        
+        &-05 {
+        width: 40rem;
+        }
+
+    }
+
+}
+
+@media (max-width: 1030px) {
+    .title {
+        max-width: 18rem;
+    }
+
+    h2 {
+        font-size: 2.0rem;
+    }
+
+    .coral02{
+    max-height: 15rem;
+    }
+    .coral{
+    left: -5rem;
+    }
+    .dori{
+        left: 15rem;
+        }
+
+    h1 {
+        font-size: 11rem;
+    }
+}
+
+@media (max-width: 890px) {
+    .seaweed-sc1 {
+        max-height: 20rem;
+    }
+
+    .fish-sc1 {
+        height: 10rem;
+    }
+
+    .bed{
+        max-height: 20rem;
+    }
+
+    .desk {
+        max-width: 15rem;
+        left: 0rem;
+    }
+    
+    .bolts, .feathers {
+        display: none;
+    }
+    
+    .fish-sc4 {
+        max-height: 11rem;
+    }
+
+    .dori {
+        max-height: 7rem;
+
+    }
+    .spanner {
+        top: 8.5rem;
+        left: 7.5rem;
+        max-width: 4rem;
+    }
+
+    .cloud {
+        &-01 {
+        width: 10rem;
+        }
+        &-02 {
+        width: 15rem;
+        }
+        &-03 {
+        width: 10rem;
+        }
+        &-04 {
+        width: 20rem;
+        }
+        
+        &-05 {
+        width: 30rem;
+        }
+         
+    }
+
+}
+
+@media (max-width: 750px) {
+    .background {
+        flex-direction: column;
+    }
+
+    .title {
+        max-width: 30rem;
+    }
+
+    .text {
+    max-width: 70%;
+    text-align: center;
+    order: -1;
+    }
+
+    .seaweed-sc1 {
+        bottom: 10rem;
+        bottom: 15rem;
+        left: 7rem;
+    }
+
+    .fish-sc1 {
+        height: 10rem;
+        left: -4rem;
+        bottom: 7rem;
+    }
+
+    .coral-bg02 {
+        display: none;
+    }
+
+    .scene-ready {
+        z-index: 100;
+    }
+
+    h1 {
+        font-size: 9rem;
+    }
+
+    .city-back {
+        bottom: -25rem;
+    }
+    .city-front {
+        bottom: -25rem;
+    }
+}
+
+
+@media (max-width: 630px) {
+
+    .dream {
+        max-width: 8rem;
+        left: -7rem;
+    }
+
+    .sign {
+    padding: 1rem 4rem;
+    }
+
+    
+
+    .cloud {
+        &-01 {
+        width: 10rem;
+        }
+        &-02 {
+        width: 15rem;
+        }
+        &-03 {
+        width: 10rem;
+        }
+        &-04 {
+        width: 20rem;
+        }
+        
+        &-05 {
+        width: 20rem;
+        }
+        &-06 {
+        width: 20rem;
+        }
+    }
+       
+}
+
+@media (max-width: 530px) {
+
+    .dream {
+        left: -2rem;
+        top: -8rem;
+    }
+
+    .dream02 {
+        left: -3rem;
+    }
+
+    .seaweed-sc1 {
+        max-height: 18rem;
+        left: 5rem;
+    }
+
+    .coral {
+        left: -2rem;
+        bottom: -5rem;
+        max-height: 12rem;
+    }
+    .coral02 {
+        bottom: -5rem;
+    }
+
+    .crab {
+        max-height: 5rem;
+        bottom: -5rem;
+    }
+
+    .dori {
+        left: 10rem;
+    }
+    
+    h1 {
+        font-size: 7rem;
+    }
+    .sun {
+        width: 100px;
+	    height: 100px;
+    }
+}
+
+@media (max-width: 430px) {
+   
+    .bed{
+      max-height: 15rem; 
+   }
+   
+   .coral02 {
+    max-height: 10rem;
+    }
+
+    .window {
+        left: 5rem;
+    }
+
+    .desk {
+        left: 4rem;
+    }
+
 }
